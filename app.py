@@ -2,7 +2,25 @@ import streamlit as st
 import joblib
 import numpy as np
 
+import streamlit as st
+import joblib
+import numpy as np
+
+# DESIGN
+st.markdown("""
+<style>
+.stApp {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+}
+h1 {
+    text-align: center;
+    color: white;
+}
+</style>
+""", unsafe_allow_html=True)
+
 model = joblib.load("best_model.pkl")
+
 
 bean_names = {
 0: "SEKER",
@@ -14,7 +32,7 @@ bean_names = {
 6: "SIRA"
 }
 
-st.title("Dry Bean Classification System")
+st.markdown("<h1>🌱 Dry Bean Classification System</h1>", unsafe_allow_html=True)
 
 st.write("Enter Bean Features")
 
